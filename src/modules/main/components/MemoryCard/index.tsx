@@ -18,17 +18,18 @@ export const MemoryCard = (props: Props) => {
       onClick={() => {
         onClickCard(item.id);
       }}
-      title="memoryCard"
+      data-testid="memoryCard"
     >
       <FlipCard
         customClassName="memory-card"
         open={item.status === "open" || item.status === "done"}
       >
         <FlipCardFront>
-          <div className="front"></div>
+          <div data-testid="front" className="front"></div>
         </FlipCardFront>
         <FlipCardBack>
           <div
+            data-testid="back"
             className="back"
             style={{ backgroundImage: `url(${item.image})` }}
           ></div>

@@ -15,18 +15,32 @@ export const FlipCard = ({
 }: PropsWithChildren<Props>) => {
   return (
     <div
+      data-testid="flip-card"
       className={`flip-card ${customClassName ? customClassName : ""}`}
       style={customStyle}
     >
-      <div className={`flip-card-inner ${open ? "open" : ""}`}>{children}</div>
+      <div
+        data-testid="flip-card-inner"
+        className={`flip-card-inner ${open ? "open" : ""}`}
+      >
+        {children}
+      </div>
     </div>
   );
 };
 
 export const FlipCardFront = ({ children }: PropsWithChildren) => {
-  return <div className="flip-card-front">{children}</div>;
+  return (
+    <div data-testid="flip-card-front" className="flip-card-front">
+      {children}
+    </div>
+  );
 };
 
 export const FlipCardBack = ({ children }: PropsWithChildren) => {
-  return <div className="flip-card-back">{children}</div>;
+  return (
+    <div data-testid="flip-card-back" className="flip-card-back">
+      {children}
+    </div>
+  );
 };
