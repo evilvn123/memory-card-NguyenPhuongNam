@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { MainPageScreen } from "../modules/main";
 import { initGameBoard } from "../modules/main/helpers";
 
-it("initGameBoard is called right", () => {
+it("Render MainPage", () => {
   render(<MainPageScreen />);
   expect(initGameBoard().length).toBeGreaterThan(0);
   expect(initGameBoard().length % 2).toEqual(0);
