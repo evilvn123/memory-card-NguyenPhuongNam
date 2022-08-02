@@ -19,6 +19,9 @@ it("Render MemoryCard with sample item", () => {
   expect(screen.getByTestId("flip-card-inner")).not.toHaveClass("open");
   expect(screen.getByTestId("front")).toBeInTheDocument();
   expect(screen.getByTestId("back")).toBeInTheDocument();
+  expect(screen.getByTestId("back")).toHaveStyle(
+    `backgroundImage: ${item.image}`
+  );
   fireEvent.click(screen.getByTestId("memoryCard"));
   expect(onClickCard).toHaveBeenCalledTimes(1);
 });
