@@ -1,8 +1,36 @@
-# Getting Started with Create React App
+# Memory Card Game
 
+*****
+
+This applications are implemented using [ReactJS](https://reactjs.org/)
+with [Typescript](https://www.typescriptlang.org/).
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+**Recommend:** [Npm v6](https://adoptopenjdk.net/installation.html)
+and [Node v14](https://nodejs.org/en/).
+*****
+
+## Table of Contents
+
+* [Approach](#approach)
+* [Technologies](#technologies)
+
+*****
+
+## Approach
+
+### Setup for React Projects
+
+#### 1. Install Node JS and NPM on your developing machine:
+
+- Install here: https://nodejs.org/en/. Note that NPM comes with Node JS installation.
+- Highly recommend to use [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows) to manage Node JS versioning on Windows because updating Node JS is not a straightforward task on Windows. Using nvm to install/update to version 14.
+
+#### 2. Install modules
+### `npm install`
+
+Install necessary modules/libraries.
+#### 3. Available Scripts
 
 In the project directory, you can run:
 
@@ -33,14 +61,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies
+- Development Modules
+  - Reactjs
+  - Typescripts
+  - SASS/SCSS
+  - lodash
+- Test
+  - Jest
+  - react-test-rerender
+  - Enzyme
