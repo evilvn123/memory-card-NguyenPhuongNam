@@ -19,8 +19,6 @@ it("Render list MemoryCard", () => {
   const wrapper = enzyme.shallow(<MainPageScreen />);
   const gameBoard = initGameBoard();
   expect(wrapper.find(MemoryCard)).toHaveLength(gameBoard.length);
-  const sampleCard = wrapper
-    .find(MemoryCard)
-    .every((item) => item.prop("item").status === "close");
-  expect(sampleCard).toBeFalsy();
+  const sampleCard = wrapper.find(MemoryCard).at(0);
+  expect(sampleCard.prop("item").status === "close").toBeTruthy();
 });
