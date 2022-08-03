@@ -12,7 +12,6 @@ export const MainPageScreen = () => {
     const currentOpenCards = boardData.filter(
       (card: GameCard) => card.status === "open"
     );
-
     if (currentOpenCards.length < 2) {
       setBoardData(
         boardData.map((card: GameCard) => {
@@ -29,16 +28,12 @@ export const MainPageScreen = () => {
       setGameFinished(true);
       return;
     }
-
     const [firstOpenCard, secondOpenCard] = boardData.filter(
       (card: GameCard) => card.status === "open"
     );
-
     if (!firstOpenCard || !secondOpenCard) return;
-
     const isOpenedCardsMatch =
       firstOpenCard.cardName === secondOpenCard.cardName;
-
     setTimeout(() => {
       setBoardData(
         boardData.map((card: GameCard) => {

@@ -1,6 +1,10 @@
 import { render, screen } from "@testing-library/react";
-import { MainPageScreen } from "../modules/main";
+import { MainPageScreen, MemoryCard } from "../modules/main";
 import { initGameBoard } from "../modules/main/helpers";
+import * as enzyme from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+
+enzyme.configure({ adapter: new Adapter() });
 
 it("Render MainPage", () => {
   render(<MainPageScreen />);
@@ -9,4 +13,14 @@ it("Render MainPage", () => {
   expect(screen.queryAllByTestId("memoryCard").length).toEqual(
     initGameBoard().length
   );
+});
+
+it("Render list MemoryCard", () => {
+  const wrapper = enzyme.shallow(<MainPageScreen />);
+  const gameBoard = initGameBoard();
+  expect(wrapper.find(MemoryCard)).toHaveLength(gameBoard.length);
+  const sampleCard = wrapper
+    .find(MemoryCard)
+    .every((item) => item.prop("item").status === "close");
+  expect(sampleCard).toBeFalsy();
 });
