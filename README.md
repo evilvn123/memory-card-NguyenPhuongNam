@@ -11,16 +11,25 @@ and [Node v14](https://nodejs.org/en/).
 *****
 
 ## Table of Contents
+* [Technologies used](#technologies)
 
 * [Approach](#approach)
-* [Technologies](#technologies)
 
 *****
-
+## Technologies
+- Technologies
+  - HTML
+  - Reactjs
+  - Typescripts
+  - SASS/SCSS
+- Extra library
+  - lodash
+- Test library
+  - Jest
+  - react-test-rerender
+  - Enzyme
 ## Approach
-
 ### Setup for React Projects
-
 #### 1. Install Node JS and NPM on your developing machine:
 
 - Install here: https://nodejs.org/en/. Note that NPM comes with Node JS installation.
@@ -60,14 +69,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-## Technologies
-- Development Modules
-  - Reactjs
-  - Typescripts
-  - SASS/SCSS
-  - lodash
-- Test
-  - Jest
-  - react-test-rerender
-  - Enzyme
